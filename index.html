@@ -207,7 +207,7 @@ touch-callout: none;
         window.location.href = "index.html#butchers"; // Comentado
         // var iframe = document.getElementById('#butchers');
         // iframe.src = iframe.src;
-        // alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
+        alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
         $("#cuadro_butchers").css("height",screen.height);
         // setTimeout(cambiar_height, 500);
         // $('#index').fadeOut(800);
@@ -225,12 +225,14 @@ touch-callout: none;
     }
     setTimeout(valida_online, 5000); // Comentado
 
+    screenWidth = screen.width;
     screenHeight = screen.height;
 
     setInterval(function () {
-      if (screen.height !== screenHeight) {
+      if (screen.width !== screenWidth || screen.height !== screenHeight) {
         $("#cuadro_butchers").css("height",screen.height);
         screenHeight = screen.height;
+        screenWidth = screen.width;
         // console.log(screenHeight);
       }
     }, 50);
