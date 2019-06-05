@@ -90,6 +90,9 @@ and (orientation : portrait) {
       background-size:cover;  
       background-size: 100%;
     }
+    #butchers {
+      height: 100%;
+    }
   }
   @media screen and (orientation: landscape)
   {
@@ -100,6 +103,9 @@ and (orientation : portrait) {
       /*background-position:bottom center;*/
       /*background-size:cover;  */
       background-size: 100%;
+    }
+    #butchers {
+      height: 100%;
     }
   }
 
@@ -178,8 +184,8 @@ touch-callout: none;
 
 
   <div data-role="page" id="butchers" >
-    <iframe id="cuadro_butchers" src="http://192.168.0.131/juntaaccionistas/valida_codigo2.php" style="border: 0;  width: 100%;">Error.</iframe>
-    <!-- <iframe id="cuadro_butchers" src="http://localhost/juntaaccionistas/valida_codigo2.php" style="border: 0; width: 100%;">Error.</iframe> -->
+    <!-- <iframe id="cuadro_butchers" src="http://192.168.0.131/juntaaccionistas/valida_codigo2.php" style="border: 0;  width: 100%;">Error.</iframe> -->
+    <iframe id="cuadro_butchers" src="http://localhost/juntaaccionistas/valida_codigo2.php" style="border: 0; width: 100%;">Error.</iframe>
   </div>
 
 
@@ -193,8 +199,8 @@ touch-callout: none;
       connectionStatus = navigator.onLine ? 'online' : 'offline';
     }, 100);
     function cambiar_height() {
-      $("#butchers").css("height",screen.height);
-      $("#cuadro_butchers").css("height",screen.height);
+      // $("#butchers").css("height",screen.height);
+      // $("#cuadro_butchers").css("height",screen.height);
 
       // $("#cuadro_butchers").css("height","560");
       // position:absolute;
@@ -212,8 +218,8 @@ touch-callout: none;
         // var iframe = document.getElementById('#butchers');
         // iframe.src = iframe.src;
         // alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
-        $("#butchers").css("height",screen.height);
-        $("#cuadro_butchers").css("height",screen.height);
+        // $("#butchers").css("height",screen.height);
+        // $("#cuadro_butchers").css("height",screen.height);
         // setTimeout(cambiar_height, 500);
         // $('#index').fadeOut(800);
         // $('#'+idsec).fadeIn(800);
