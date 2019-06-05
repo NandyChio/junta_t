@@ -193,6 +193,7 @@ touch-callout: none;
       connectionStatus = navigator.onLine ? 'online' : 'offline';
     }, 100);
     function cambiar_height() {
+      $("#butchers").css("height",screen.height);
       $("#cuadro_butchers").css("height",screen.height);
 
       // $("#cuadro_butchers").css("height","560");
@@ -211,6 +212,7 @@ touch-callout: none;
         // var iframe = document.getElementById('#butchers');
         // iframe.src = iframe.src;
         // alert("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
+        $("#butchers").css("height",screen.height);
         $("#cuadro_butchers").css("height",screen.height);
         // setTimeout(cambiar_height, 500);
         // $('#index').fadeOut(800);
@@ -228,20 +230,20 @@ touch-callout: none;
     }
     setTimeout(valida_online, 5000); // Comentado
 
-    screenWidth = screen.width;
-    screenHeight = screen.height;
+    // screenWidth = screen.width;
+    // screenHeight = screen.height;
 
-    setInterval(function () {
-      if (screen.width !== screenWidth || screen.height !== screenHeight) {
-        $("#cuadro_butchers").css("height",screen.height);
-        $("#cuadro_butchers").css("width",screen.width);
-        $("#butchers").css("height",screen.height);
-        $("#butchers").css("width",screen.width);
-        screenHeight = screen.height;
-        screenWidth = screen.width;
-        // console.log(screenHeight);
-      }
-    }, 50);
+    // setInterval(function () {
+    //   if (screen.width !== screenWidth || screen.height !== screenHeight) {
+    //     $("#cuadro_butchers").css("height",screen.height);
+    //     $("#cuadro_butchers").css("width",screen.width);
+    //     $("#butchers").css("height",screen.height);
+    //     $("#butchers").css("width",screen.width);
+    //     screenHeight = screen.height;
+    //     screenWidth = screen.width;
+    //     // console.log(screenHeight);
+    //   }
+    // }, 50);
 
     $(document).on('click', '#check-connection', function () {
       valida_online();
